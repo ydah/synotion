@@ -174,8 +174,7 @@ RSpec.describe Synotion::Client do
     it 'retrieves all blocks from the page' do
       response = double('response', results: [double('block')], has_more: false)
       expect(api_client).to receive(:block_children).with(
-        block_id: page_id,
-        start_cursor: nil
+        block_id: page_id
       ).and_return(response)
 
       result = client.get_page_blocks(page_id)
@@ -187,8 +186,7 @@ RSpec.describe Synotion::Client do
       response2 = double('response', results: [double('block2')], has_more: false)
 
       expect(api_client).to receive(:block_children).with(
-        block_id: page_id,
-        start_cursor: nil
+        block_id: page_id
       ).and_return(response1)
 
       expect(api_client).to receive(:block_children).with(

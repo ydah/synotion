@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+- Add support for tables and inline links in Markdown to Notion conversion.
+
 ## [0.1.0] - 2025-12-15
 
 - Initial release

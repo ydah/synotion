@@ -78,10 +78,10 @@ module Synotion
       cursor = nil
 
       loop do
-        response = api_client.block_children(
-          block_id: page_id,
-          start_cursor: cursor
-        )
+        params = { block_id: page_id }
+        params[:start_cursor] = cursor if cursor
+
+        response = api_client.block_children(**params)
 
         blocks.concat(response.results)
 

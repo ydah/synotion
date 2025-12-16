@@ -111,7 +111,7 @@ unique_property: source_file
 
 ### Supported Markdown Elements
 
-- Headings (H1, H2, H3)
+- Headings (H1, H2, H3+)
 - Paragraphs
 - Code blocks with syntax highlighting
 - Bulleted lists
@@ -119,6 +119,8 @@ unique_property: source_file
 - Quotes
 - Dividers
 - Todo items / Checkboxes
+- Tables (converted to Notion table blocks)
+- Links (external URLs converted to clickable links)
 - YAML front matter
 
 ## Notion Setup
